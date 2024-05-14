@@ -20,7 +20,7 @@ sagan = [
 
 # We are a way for the cosmos to know itself.
 
-puts "#{carl[:words][2]} #{sagan[0][:are]} #{sagan[0]['A']} #{sagan[1]['waaaaaay']} #"
+puts "#{carl[:words][2]} #{sagan[0][:are]} #{sagan[0]['A']} #{sagan[1]['waaaaaay']} #{carl[:words][1]} "
 
 # Here is an example of building a setence out of array/hash pieces.
 example = [ 'test', 'a', 'is']
