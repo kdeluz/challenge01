@@ -62,3 +62,23 @@ dog_breeds['message'].each do |breed, sub_breeds|
     end
   end
 end
+
+# PART 4
+url = 'https://data.winnipeg.ca/resource/d3jk-hb6j.json?$limit=306000'
+uri = URI(url)
+response = Net::HTTP.get(uri)
+trees = JSON.parse(response)
+# pp trees
+
+ash_count = 0
+
+trees.each do |tree|
+  common_name = tree["common_name"]
+  botanical_name = tree["botanical_name"]
+
+  if common_name.include?("ash") || botanical_name.include?("ash")
+    ash_count += 1
+  end
+end
+
+puts "Number of Ash Trees: #{ash_count}"
